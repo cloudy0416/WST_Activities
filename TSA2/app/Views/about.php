@@ -20,7 +20,7 @@
             <p><strong>Name:</strong> Paul Matthew M. Roxas</p>
             <p><strong>Section:</strong> TW35</p>
             <p><strong>Course:</strong> IT0049 - Web System Technologies</p>
-            <p><strong>Description:</strong> This application serves as Technical Summative Assessment 1 for IT0049, demonstrating database filtering and MVC architecture in CodeIgniter 4.</p>
+            <p><strong>Description:</strong> This application serves as Technical Summative Assessment 2 for IT0049, demonstrating authenticated task management, validation, soft deletion, and MVC architecture in CodeIgniter 4.</p>
         </div>
     </div>
 </body>

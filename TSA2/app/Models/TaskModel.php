@@ -8,12 +8,14 @@ class TaskModel extends Model
 {
     protected $table            = 'tasks';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['title', 'status', 'task_date', 'created_at'];
+    protected $allowedFields    = ['title', 'status', 'task_date', 'created_at', 'is_archived'];
+    protected $useTimestamps    = false;
 
     // Get only today's tasks
     public function getTodayTasks()
     {
-        return $this->where('task_date', date('Y-m-d'))
+        return $this->where('is_archived', 0)
+                    ->where('task_date', date('Y-m-d'))
                     ->orderBy('created_at', 'DESC')
                     ->findAll();
     }
@@ -21,7 +23,8 @@ class TaskModel extends Model
     // Get all tasks ordered by date
     public function getAllTasksOrdered()
     {
-        return $this->orderBy('task_date', 'DESC')
+        return $this->where('is_archived', 0)
+                    ->orderBy('task_date', 'DESC')
                     ->findAll();
     }
 }
